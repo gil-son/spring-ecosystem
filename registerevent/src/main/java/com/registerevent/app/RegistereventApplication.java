@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication
-@ComponentScan({"com.registerevent.controller"})
+@ComponentScan({"com.registerevent.controller"}) // Spring Boot version 2.0 and above... required
 public class RegistereventApplication {
 
 	public static void main(String[] args) {
