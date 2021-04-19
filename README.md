@@ -1,8 +1,10 @@
 # spring-boot-compilation
 
-## Why learning and use Spring?
 
-<p>Before...</p>
+## Introduction
+<p>This repository seeks to study Spring Boot, concepts, methodologies, libraries, mini-projects, etc ... It is important to understand the behind the scenes and not just code. Thus there will be a greater understanding which increase the possibilities of resolution, creation, prevention, etc.</p>
+
+
 
 ## What is Spring?</p>
 
@@ -65,5 +67,24 @@
   <li>Walmart</li>
 </ul>
 
- 
+
+ ### Spring Boot vs. Spring
+
+<p>Spring is a framework with distinct tools can be combined and Spring Boot is a enviroment prepared to production and can integrations Spring tool in modules.</p>
+
+<p>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".</p>
+
+<p>Most Spring Boot applications need minimal Spring configuration.</p>
+
+
+### Features
+
+<ul>
+  <li>Create stand-alone Spring applications</li>
+  <li>Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)</li>
+  <li>Provide opinionated 'starter' dependencies to simplify your build configuration</li>
+  <li>Automatically configure Spring and 3rd party libraries whenever possible</li>
+  <li>Provide production-ready features such as metrics, health checks, and externalized configuration</li>
+  <li>Absolutely no code generation and no requirement for XML configuration</li>
+</ul>
 
