@@ -89,7 +89,7 @@
 </ul>
 
 
-### Getting to know Spring Boot
+## Getting to know Spring Boot
 
 <p>In the past, this was how I set up Springs projects, manually in XML. The components can be simple, but the configurations were not always. A simple typo could not be noticed and would only be noticed after running the application:</p>
 
