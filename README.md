@@ -68,26 +68,6 @@
 </ul>
 
 
- ### Spring Boot vs. Spring
-
-<p>Spring is a framework with distinct tools can be combined and Spring Boot is a enviroment prepared to production and can integrations Spring tool in modules.</p>
-
-<p>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".</p>
-
-<p>Most Spring Boot applications need minimal Spring configuration.</p>
-
-
-### Features
-
-<ul>
-  <li>Create stand-alone Spring applications</li>
-  <li>Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)</li>
-  <li>Provide opinionated 'starter' dependencies to simplify your build configuration</li>
-  <li>Automatically configure Spring and 3rd party libraries whenever possible</li>
-  <li>Provide production-ready features such as metrics, health checks, and externalized configuration</li>
-  <li>Absolutely no code generation and no requirement for XML configuration</li>
-</ul>
-
 
 ## Getting to know Spring Boot
 
@@ -118,11 +98,34 @@
 
 <p>So when adding a dependency to pom.xml using Maven, it will be added to the project's Classpath. Spring Boot will always add compatible versions with Maven.</p>
 
+ ### Spring Boot vs. Spring
+
+<p>Spring is a framework with distinct tools can be combined and Spring Boot is a enviroment prepared to production and can integrations Spring tool in modules.</p>
+
+<p>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".</p>
+
+<p>Most Spring Boot applications need minimal Spring configuration.</p>
+
+
+### Features
+
+<ul>
+  <li>Create stand-alone Spring applications</li>
+  <li>Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)</li>
+  <li>Provide opinionated 'starter' dependencies to simplify your build configuration</li>
+  <li>Automatically configure Spring and 3rd party libraries whenever possible</li>
+  <li>Provide production-ready features such as metrics, health checks, and externalized configuration</li>
+  <li>Absolutely no code generation and no requirement for XML configuration</li>
+</ul>
+
+
 ### Spring Boot or Spring MVC?
 
 <p>Spring Boot does not replace the Spring MVC!</p>
 
 <p>Spring Boot is an abstraction layer on top of Spring, it can work as a Web and / or other applications. So he has Spring MVC. And, for Spring Boot to have a Web application, it will use Spring MVC.</p>
+
+
 
 
 
