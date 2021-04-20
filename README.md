@@ -88,3 +88,41 @@
   <li>Absolutely no code generation and no requirement for XML configuration</li>
 </ul>
 
+
+### Getting to know Spring Boot
+
+<p>In the past, this was how I set up Springs projects, manually in XML. The components can be simple, but the configurations were not always. A simple typo could not be noticed and would only be noticed after running the application:</p>
+
+
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1c45056e-55b3-42d9-a57e-42b554212378/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210420%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210420T021352Z&X-Amz-Expires=86400&X-Amz-Signature=7d089f63ab228e75c41fc6d6817555027f6eb4d1f3ba4a519fdc571d4639d92c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22"/>
+
+
+<p>For this reason, as of version 3, the configuration can be done programmatically in Java codes. This brought benefits, such as avoiding typos, since the configuration class needs to be compiled:</p>
+
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c6b419e1-b7bb-4a8d-91dd-25ec5a1a5949/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210420%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210420T021823Z&X-Amz-Expires=86400&X-Amz-Signature=ecf660c02055a50ffe5aec21bf7f91fae5439ed5e2efe7a66451239ad1b2a896&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22"/>
+
+<p>Yes, we still write a lot of code and that's a good thing! However, with so much overconfiguration, the developer may lose focus on developing business rules of the application.</p>
+
+<p>The solution is Spring Boot! For bringing a previously configured environment for production, with the possibility of integrating Springs modules, being self-configured and many other optimizations ... it makes everything more practical and accessible! It is possible to customize these settings, but many times it is not necessary, because the goal is to make the developer not worry about that part.</p>
+
+<p>It works directly with Maven which is the dependency manager and works with pom.xml:</p>
+
+
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6b86e700-26eb-45ab-9a50-81716f3a13fb/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210420%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210420T022504Z&X-Amz-Expires=86400&X-Amz-Signature=e5598bd7405cfef603cb82d35497dda4d669a76b928c7323e2908e725dca08c2&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22"/>
+
+<p>Spring Boot facilitates this, as it uses Starters which are dependencies that group other dependencies:</p>
+
+
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/22fb5ff5-6a3f-4cf9-bc25-9dac793cf4cc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210420%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210420T022041Z&X-Amz-Expires=86400&X-Amz-Signature=3d22abaceef70f3af32289cca2da9f6f1d3ace075215551324986b6f6077d5be&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22"/>
+
+
+<p>So when adding a dependency to pom.xml using Maven, it will be added to the project's Classpath. Spring Boot will always add compatible versions with Maven.</p>
+
+### Spring Boot or Spring MVC?
+
+<p>Spring Boot does not replace the Spring MVC!</p>
+
+<p>Spring Boot is an abstraction layer on top of Spring, it can work as a Web and / or other applications. So he has Spring MVC. And, for Spring Boot to have a Web application, it will use Spring MVC.</p>
+
+
+
