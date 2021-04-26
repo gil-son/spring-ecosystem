@@ -14,6 +14,7 @@ import com.devsuperior.domainmodel.entities.OrderItem;
 import com.devsuperior.domainmodel.entities.OrderStatus;
 import com.devsuperior.domainmodel.entities.Product;
 import com.devsuperior.domainmodel.repositories.ClientRepository;
+import com.devsuperior.domainmodel.repositories.OrderItemRepository;
 import com.devsuperior.domainmodel.repositories.OrderRepository;
 import com.devsuperior.domainmodel.repositories.ProductRepository;
 
@@ -38,6 +39,9 @@ public class DomainmodelApplication implements CommandLineRunner{ // CommandLine
 	public static void main(String[] args) {
 		SpringApplication.run(DomainmodelApplication.class, args);
 	}
+	
+	@Autowired
+	private OrderItemRepository ordemItemRepository;
 
 	@Override      // ELLIPSIS (...)
 	public void run(String... args) throws Exception { // The args parameter will receives data from the command line
@@ -61,19 +65,30 @@ public class DomainmodelApplication implements CommandLineRunner{ // CommandLine
 		
 		orderRepository.saveAll(Arrays.asList(o1,o2));
 		
-		// Use 1000.0 instead p1.getPrice()
+		
+		
+		/*
 		OrderItem oi1 = new OrderItem(null,1,1000.0,p1,o1);
 		OrderItem oi2 = new OrderItem(null,2,4.0,p1,o1);
 		OrderItem oi3 = new OrderItem(null,1,4.0,p1,o2);
 		OrderItem oi4 = new OrderItem(null,1,1200.0,p1,o2);
+		ordemItemRepository.saveAll(Arrays.asList(oi1,oi2,oi3,oi4));
+		*/
 		
-		// ordemItemRepository.saveAll((Arrays.asList(oi1,oi2,oi3,oi4)));
 		
 		// In this case of strong composition. The right thing would be to implement 'OrdemItem' as an association class between 'Order' and 'Product'
-		// So 'OrdemItem' would only exist if there are both. But in order not to complicate the teacher went like this
+		// So 'OrdemItem' would only exist if there are both.
 		
 		
+		// Use 1000.0 instead p1.getPrice()
 		
+		Order o = new Order();
+		o.startOrdemItem(1, 1000.0, p1, o1);
+		o.startOrdemItem(2, 40.0, p2, o1);
+		o.startOrdemItem(1, 40.0, p2, o2);
+		o.startOrdemItem(1, 1200.0, p3, o2);
+		
+		 ordemItemRepository.saveAll(o.getItems());
 	}
 
 }
