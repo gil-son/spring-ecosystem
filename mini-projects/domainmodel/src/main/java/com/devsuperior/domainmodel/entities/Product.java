@@ -16,7 +16,7 @@ public class Product {
 	private String name;
 	private Double price;
 	 
-	public void Product(){}
+	public Product(){}
 
 	public Product(Integer id, String name, Double price) {
 		this.id = id;
@@ -48,7 +48,5 @@ public class Product {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-	 
-	 
 	 
 }
