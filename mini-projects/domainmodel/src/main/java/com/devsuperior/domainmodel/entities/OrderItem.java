@@ -83,4 +83,8 @@ public class OrderItem {
 		this.order = order;
 	}
 	
+	public double getTheSubTotal() { // require use get to emerge
+		return quantity * price;
+	}
+	
 }
