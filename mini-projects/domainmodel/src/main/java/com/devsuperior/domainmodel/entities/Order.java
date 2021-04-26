@@ -28,10 +28,20 @@ public class Order {
 	@JoinColumn(name="client_id") // Specify the name of foreign key
 	private Client client; 
 	
+	
+	
+	
 	// Warning! Two way street ! Cyclic reference! To avoid loop is used @JsonIgnore in the other side (technique)
 	// Relation to Many, use Set or List
 	@OneToMany(mappedBy = "order") // Order has OneToMany to OrderItems //mappedBy = name of attribute the other side and will make the relation
 	private List<OrderItem> items = new ArrayList<>();
+	
+	public void startOrdemItem(int quantity, double price, Product p, Order o) {
+		
+		OrderItem oi = new OrderItem(null, quantity, price, p, o);
+		items.add(oi);
+	}
+	
 	
 	
 	public Order() {}
@@ -81,6 +91,14 @@ public class Order {
 	// In Collection is rare use method 'set()', because is just necessary get the list. So just use method 'get()'
 	public List<OrderItem> getItems() {
 		return items;
+	}
+	
+	public double getTheTotal() {
+		double sum = 0;
+		for( OrderItem item : items) {
+			sum += item.getTheSubTotal();
+		}
+		return sum;
 	}
 	
 }
