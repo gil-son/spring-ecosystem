@@ -1,5 +1,6 @@
 package services;
 
-public class DeductionService {
+public interface DeductionService {
 
+	public double deduction(double amount);
 }
