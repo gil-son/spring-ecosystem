@@ -196,6 +196,12 @@ public class ProgramDI {
 }
 ```
 
+<p>If we execute:</p>
+
+```
+176.0
+```
+
 <p>If we want to implement the SP or other locales, just create a class: </p>
 
 ```
