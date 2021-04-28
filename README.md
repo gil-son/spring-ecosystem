@@ -5,15 +5,15 @@
 
 <hr/>
 
+![image](https://fabiana2611.github.io/img/spring/spring-ecosystem.jpg)
+
+<hr/>
+
 ![image](https://user-images.githubusercontent.com/72712095/116346071-ddfefd80-a7bf-11eb-9551-53f188c7f878.png)
 
 <hr/>
 
 ![image](https://ordina-jworks.github.io/img/spring-ecosystem/spring-popular.png)
-
-<hr/>
-
-![image](https://fabiana2611.github.io/img/spring/spring-ecosystem.jpg)
 
 <hr/>
 
