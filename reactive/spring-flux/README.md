@@ -4,19 +4,54 @@
 
 ## Introduction
 
-<p>Reactive systems have certain characteristics that make them ideal for low-latency, high-throughput workloads. 
-Project Reactor and the Spring portfolio work together to enable developers to build enterprise-grade reactive systems that are responsive, resilient, elastic, and message-driven.</p>
+<p> Spring-WebFlux is a new module that was introduced in Spring Framework 5.0</p>
 
-## What is reactive processing?
-<p>Reactive processing is a paradigm that enables developers build non-blocking, asynchronous applications that can handle back-pressure (flow control).</p>
+<p> Spring-WebFlux was created to allow you to reactively program within Spring. So if you have a Java web application and use Spring MVC, you’re programming synchronously and blocking. But what does it mean?</p>
 
-## Why use reactive processing?
-<p>Reactive systems better utilize modern processors. Also, the inclusion of back-pressure in reactive programming ensures better resilience between decoupled components.</p>
+<p>
+  Imagine that your application receives several requests at once:
+</p>
+  <ul>
+    <li>Request 1</li>
+    <li>Request 2</li>
+    <li>Request 3</li>
+  </ul>
 
+<p>
+    Spring, will execute the first request completely and only then execute the next request, according to the order of arrival:
+</p>
 
-![image](https://spring.io/images/diagram-reactive-dark-31d740ed8e454af5f1b8d55ae716525d.svg)
+</p>
+  <ul>
+    <li>Request 1 (70%)</li>
+    <li>Request 2 (0%)</li>
+    <li>Request 3 (0%)</li>
+  </ul>
 
-<hr/>
+<p>
+    This is synchronous programming. Your entire process needs to wait for one step to be able to perform the next step (synchronous).
+</p>
+
+<p>
+  Imagine a user requesting a large amount of data from the database ... this will take a little longer. This request will then block all subsequent requests until it is fully answered. Making the system have a bottleneck. This is working in a synchronous and blocking way.
+</p>
+
+<p>
+  When you use Spring Webflux, while a request occurs, the next request can process and proceed in parallel:
+</p>
+
+</p>
+  <ul>
+    <li>Request 1 (70%)</li>
+    <li>Request 2 (60%)</li>
+    <li>Request 3 (85%)</li>
+  </ul>
+ 
+ <p>
+    That's because you're working reactively, that is, asynchronously and not blocking.
+ </p>
+  
+  
 
 
 
