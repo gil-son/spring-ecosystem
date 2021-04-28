@@ -1,8 +1,8 @@
 # Dependency Injection01
 
-## Analise SEM Injeção de Dependência
+## Analyze WITHOUT Dependency Injection
 
-<p> Imagina que você tem uma quantidade de dinheiro e você quer descobrir o quanto de imposto precisa pagar:</p>
+<p> Imagine you have an amount of money and you want to find out how much tax you need to pay:</p>
 
 ```
 package application;
@@ -19,25 +19,25 @@ public class Program {
 
 ```
 
-<p>Para descobrir esse imposto foi instânciado um serviço de pagamento:</p>
+<p>In order to discover this tax, a payment service was instigated:</p>
 
 ```
   PayService payService = new PayService();
 ```
 
-<p>Desse serviço de pagamento, foi chamado o método 'tax' que é referente ao imposto, passando a quantida de 1000.0:</p>
+<p>Of this payment service, the 'tax' method was called, which refers to the tax, passing the amount of 1000.0:</p>
 
 ```
   double tax = payService.tax(1000.0);
 ```
 
-<p> O resultado será:</p>
+<p> The result will be:</p>
 
 ```
 176.0
 ```
 
-<p>Porque deu 176.0? Acessando a classe 'PayService':</p>
+<p>Why is the result 176.0? Accessing the 'PayService' class:</p>
 
 ```
 package services;
@@ -52,10 +52,10 @@ public class PayService {
 }
 ```
 
-<p>Vemos que ele tem uma dependência para 'DeductionService deductionService' que é um serviço de dedução (abate o valor valor antes de calcular o imposto). Bom Esse 'deductionService' tem a instância do 'MGDeductionService()', ou seja, é o serviço de dedução especifico da região de MG. </p>
+<p>We see that it has a dependency for 'DeductionService deductionService' which is a deduction service (this remove a parte the amount before calculating the tax). Good This 'deductionService' has the instance of 'MGDeductionService ()', that is, it is the specific deduction service for the MG region. </p>
 
 
-<p> Se acessarmos o DeductionService vamos ver que ele é uma Interface que define o método 'deduction':</p>
+<p> If we access the 'DeductionService' we will see that it is an Interface that defines the 'deduction' method:</p>
 
 ```
 package services;
@@ -67,7 +67,7 @@ public interface DeductionService {
 
 ```
 
-<p>Então a classe 'MGDeductionService' vai implamentar o 'DeductionService' e vai sobreescrever o método 'deduction' informando que o valor que entrar retornará 12% do seu valor:</p>
+<p>Then the class 'MGDeductionService' will implement the 'DeductionService' and will override the 'deduction' method informing that the value that you enter will return 12% of its value:</p>
 
 ```
 package services;
@@ -82,7 +82,7 @@ public class MGDeductionService implements DeductionService{
 
 ```
 
-<p> Então voltando para a classe PayService:</p>
+<p> So going back to the 'PayService' class:</p>
 
 ```
 package services;
@@ -97,20 +97,20 @@ public class PayService {
 }
 ```
 
-<p> O método 'tax()' vai subtrair o valor que entrar com 12% desse mesmo valor e em seguida multiplicar esse valor por 20%. No de correr desse processo temos:</p>
+<p> The 'tax ()' method will subtract the value that you enter with 12% of that value and then multiply that value by 20%. In the running of this process we have:</p>
 
 
 ```
   (1000.0 - (1000.0 * 0.12)) * 0.2 = 176.0
 ```
 
-<p> Bom, funciona... mas caso seja necessário implementar outro serviço, agora referente a localidade SP, vamos precisar mexer na classe PayService e substituir instância por SPDeductionService(), tem como criar condicionais também... mas precisa mexer direto na classe para trocar a instância e/ou criar condicionais... não é interessante para o desenvolvimento da aplicação e manutenção. Imagina que p/ cada novo serviço, uma nova condicional e/ou instância? É por isso que vamos utilizar a inversão de dependência, mais conhecida como Injeção de Dependência.</p>
+<p> Well, it works ... but if you need to implement another service, now referring to the SP location, we will need to change the PayService class and replace the instance with SPDeductionService (), you can create conditionals too ... but you need to change the class directly to change the instance and / or create conditionals ... it is not interesting for the development of the application and maintenance. Imagine that for each new service, a new conditional and / or instance? That is why we are going to use dependency inversion, better known as Dependency Injection.</p>
 
 
-## Analise COM Injeção de Dependência
+## Analysis WITH Dependency Injection
 
 
-<p> Bom, então vamos implementar o conceito de Injeção de dependência. Primeiro vamos até a classe 'PayService':</p>
+<p> Well, then we are going to implement the Dependency Injection concept. First, let's go to the 'PayService' class:</p>
 
 ```
 package services;
@@ -126,7 +126,7 @@ public class PayService {
 ```
 
 
-<p>Desacoplamos a instância fixa do MGDeductionService() deixando o 'DeductionService deductionService' sem nenhum vinculo:</p>
+<p> We decouple the fixed instance of MGDeductionService () leaving the 'DeductionService deductionService' without any link:</p>
 
 ```
 package services;
@@ -160,9 +160,9 @@ public class PayServiceDI {
 }
 ```
 
-<p>Observe, antes tinhamos algo fixo, agora, podemos acoplar algo que vem fora com o nosso 'deduction'.</p>
+<p> Look, before we had something fixed, now, we can couple something that comes out with our 'deduction'.</p>
 
-<p>Bom mas de onde virá o 'deductionService' externo? Da classe principal, no nosso caso a Program:</p>
+<p>Well, but where will the external 'deductionService' come from? From the main class, in our case the Program:</p>
 
 
 ```
@@ -179,7 +179,7 @@ public class Program {
 }
 ```
 
-<p>Veja que agora o 'MGDeductionService()' é instânciado na classe Program (main) o que livra de mexermos na class PayService que contém a regra de negócio. Podemos otimizar:</p>
+<p> See that now the 'MGDeductionService ()' is instantiated in the Program (main) class, which frees us from messing with the PayService class that contains the business rule. We can optimize:</p>
 
 ```
 
@@ -196,7 +196,7 @@ public class ProgramDI {
 }
 ```
 
-<p>Se quisermos implementar a localidade SP ou outras basta criar a classe: </p>
+<p>If we want to implement the SP or other locales, just create a class: </p>
 
 ```
 package services;
@@ -210,7 +210,7 @@ public class SPDeductionServiceDI implements DeductionService{
 }
 ```
 
-<p>Em seguida basta:</p>
+<p>Then just:</p>
 
 ```
 public class ProgramDI {
@@ -227,7 +227,7 @@ public class ProgramDI {
 }
 ```
 
-<p>Se executarmos:</p>
+<p>If we execute:</p>
 
 ```
 180.0
