@@ -14,7 +14,7 @@ Project Reactor and the Spring portfolio work together to enable developers to b
 <p>Reactive systems better utilize modern processors. Also, the inclusion of back-pressure in reactive programming ensures better resilience between decoupled components.</p>
 
 
-![image](https://i.pinimg.com/originals/eb/95/59/eb9559ad504e7ede8016114b579e334d.png)
+![image](https://spring.io/images/diagram-reactive-dark-31d740ed8e454af5f1b8d55ae716525d.svg)
 
 <hr/>
 
