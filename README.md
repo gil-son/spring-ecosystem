@@ -2,7 +2,9 @@
 
 ![image](https://user-images.githubusercontent.com/72712095/116346071-ddfefd80-a7bf-11eb-9551-53f188c7f878.png)
 
-![image](src="https://ordina-jworks.github.io/img/spring-ecosystem/spring-popular.png)
+<hr/>
+
+![image](https://ordina-jworks.github.io/img/spring-ecosystem/spring-popular.png)
 
 <hr/>
 
