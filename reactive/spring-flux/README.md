@@ -18,6 +18,12 @@ Project Reactor and the Spring portfolio work together to enable developers to b
 
 <hr/>
 
+
+
+## Sources
+
 <ul>
-  <li><a href="https://spring.io/reactive">Spring.io - Reactive</li>
+  <li><a href="https://www.youtube.com/watch?v=jW1YdAb3GZo&list=PL8iIphQOyG-CyD9uuRTMiqxEut5QAKHga&index=1">Spring Webflux by Michelli Brito</li>
+    <li><a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html">docs.spring.io - Spring Webflux </li>
+      <li><a href="https://atitudereflexiva.wordpress.com/2020/12/08/spring-boot-introducao-a-programacao-reativa-com-webflux/">Spring Boot: Introdução à Programação Reativa com Webflux</li>
 </ul>
