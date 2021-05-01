@@ -6,6 +6,33 @@
 
 <a href="https://imgbox.com/MDqmkboA" target="_blank"><img src="https://images2.imgbox.com/ce/3b/MDqmkboA_o.png" alt="image host"/></a>
 
+
+### Analyze
+
+<p>The 'Client' entity will be used to create the client object
+according to their attributes. The entity is associated
+'Order', your relationship is 1, that is, 1 customer has an order.</p>
+
+
+<p>The 'Order' class receives specific orders
+of the entity 'OrdemItem' the relationship of entities is
+aggregation, in which case it is too many items for one
+order, 1 order for many items, ie the entity
+'Order' only exists, it will only have order events, if the entity
+'OrderItem' exists.</p>
+
+<p>Each item of 'OrdemItem' is a product, has the association 1
+'Product' to 'OrderItem'. The 'Product' entity will serve to
+create products according to their attributes.</p>
+
+
+<p>The entity 'OrderStatus' has no relation, but it serves to
+indicate the status an order is in.</p>
+
+
+
+
+
 ### OBJECT
 
 <a href="https://imgbox.com/ZExJerpP" target="_blank"><img src="https://images2.imgbox.com/51/1e/ZExJerpP_o.png" alt="image host"/></a>
