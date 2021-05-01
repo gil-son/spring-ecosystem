@@ -1,26 +1,32 @@
-# osworks-api
+# Dev Superior - Domain Model
 
-## Diagram
+## Diagram UML
 
-<a href="https://imgbox.com/nrKZuAW5" target="_blank"><img src="https://images2.imgbox.com/f5/16/nrKZuAW5_o.png" alt="image host"/></a>
+### CLASS
 
-### Technical prerequisites
+<a href="https://imgbox.com/MDqmkboA" target="_blank"><img src="https://images2.imgbox.com/ce/3b/MDqmkboA_o.png" alt="image host"/></a>
+
+### OBJECT
+
+<a href="https://imgbox.com/ZExJerpP" target="_blank"><img src="https://images2.imgbox.com/51/1e/ZExJerpP_o.png" alt="image host"/></a>
+
+## Technical prerequisites
 <ul>
   <li><a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object-oriented programming<a/></li>
-  <li><a href="https://en.wikipedia.org/wiki/JSON">JSON<a/></li>
+  <li>Relationship between classes</li>
 </ul>
 
-### Utilities
+## Utilities
 <ul>
   <li>Workspace-Spring-Tool-Suite-4-4.9.0</li>
   <li><a href="https://insomnia.rest/download">Insomnia<a/> or <a href="https://www.postman.com/">Postman<a/></li>
 </ul>
 
 
-### Configuration
+## Configuration
 
 <ul>
-  <li>Spring Boot Version: 2.4.4</li>
+  <li>Spring Boot Version: 2.4.5</li>
   <li>Type: Maven</li>
   <li>Packaging: Jar</li>
   <li>Java Version: 11</li>
@@ -28,17 +34,16 @@
  </ul>
 
 
-### Available
+## Available
 
 <ul>
   <li><a href="https://spring.io/projects/spring-ws">Spring Web (starter and dependencies)<a/> </li>
   <li><a href="https://spring.io/projects/spring-data-jpa">JPA<a/></li> 
-  <li><a href="https://spring.io/guides/gs/accessing-data-mysql/">MySQL Driver<a/></li>
-  <li><a href="https://www.baeldung.com/database-migrations-with-flyway">Flyway<a/></li>
+  <li><a href="https://spring.io/guides/gs/accessing-data-mysql/">H2 Database<a/></li>
 </ul>
 
 
-### Additional
+## Source
 <ul>
-  <li><a href="https://spring.io/projects/spring-ws">Jakarta</a> - Use to validation CRUD. If a request pass a value null, it will generate complications</li>
+  <li><a href="https://www.youtube.com/watch?v=OX5MmJrFTdw">DevSuperior -Modelo de domínio : como implementar no Spring</a> </li>
 </ul>
