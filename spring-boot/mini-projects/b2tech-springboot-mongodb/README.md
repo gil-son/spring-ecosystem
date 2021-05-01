@@ -1,9 +1,7 @@
-# rest-api-spring-boot-mondodb-CRUD
-
-## Spring Boot with MongoDB - CRUD
+# Rest API -Spring Boot with MongoDB - CRUD
 
 
-### Utilities
+## Utilities
 <ul>
   <li>Postman</li>
   <li>MongoDBCompass</li>
@@ -11,7 +9,7 @@
   <li>Studio 3T</li>
 </ul>
 
-### Configurations:
+## Configurations:
 
 <ul>
   <li>Type: Maven</li>
@@ -22,7 +20,7 @@
  </ul>
 
 
-### Dependencies:
+## Dependencies:
 
 <ul>
   <li>Spring Boot DevTools </li>
@@ -34,6 +32,6 @@
 ## Source:
 
 <ul>
-  <li><a href="https://www.youtube.com/watch?v=WUMIplH9_NE&list=PLA7e3zmT6XQUjrwAoOHvNu80Axuf-3jft"></a>B2 Tech - Spring boot and MongoDB</li>
+  <li><a href="https://www.youtube.com/watch?v=WUMIplH9_NE&list=PLA7e3zmT6XQUjrwAoOHvNu80Axuf-3jft">B2 Tech - Spring boot and MongoDB</a></li>
 </ul>
 
