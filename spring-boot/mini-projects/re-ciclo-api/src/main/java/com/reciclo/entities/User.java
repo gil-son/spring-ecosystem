@@ -1,5 +1,6 @@
 package com.reciclo.entities;
 
+
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -7,7 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
 
 @Entity
 @Table( name = "tb_users")
@@ -25,21 +29,27 @@ public class User {
 	private String email; 
 	private String phone;
 	private String password;
+	
+	@OneToOne
+	@JoinColumn( name = "address_id" )
+	private Address address;
+	
 	private Date date;
 	
 	public User() {}
 	
-	public User(Integer id, String name, Integer adm, String email, String phone, String password, Date date) {
-		super();
+	
+	public User(Integer id, String name, Integer adm, String email, String phone, String password, Address address, Date date) {
 		this.id = id;
 		this.name = name;
 		this.adm = adm;
 		this.email = email;
 		this.phone = phone;
 		this.password = password;
+		this.address = address;
 		this.date = date;
 	}
-	
+
 	public Integer getId() {
 		return id;
 	}
@@ -75,6 +85,12 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 	public Date getDate() {
 		return date;
