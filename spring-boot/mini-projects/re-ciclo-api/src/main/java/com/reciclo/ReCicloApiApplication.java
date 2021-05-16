@@ -27,6 +27,7 @@ public class ReCicloApiApplication implements CommandLineRunner{
 	@Autowired
 	AddressRepository addressRepository;
 	
+	@Override
 	public void run(String ...args) throws Exception{
 		Date date = new Date(System.currentTimeMillis());
 		
@@ -34,7 +35,7 @@ public class ReCicloApiApplication implements CommandLineRunner{
 		Address address2 = new Address(null,"Street B",0002,"Complement B","District B","Locality B","State B",02);
 		
 		User user = new User(null, "Fulano A", 1, "fulanoa@gmail.com", "3333-3333", "123456",address, date);
-		User user2 = new User(null, "Fulano B", 2, "fulanob@gmail.com", "3333-3333", "123456",address2, date);
+		User user2 = new User(null, "Fulano B", 0, "fulanob@gmail.com", "3333-3333", "123456",address2, date);
 		
 		addressRepository.saveAll(Arrays.asList(address, address2));
 		userRepository.saveAll((Arrays.asList(user, user2)));
