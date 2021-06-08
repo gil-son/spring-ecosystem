@@ -9,6 +9,7 @@ Spring:
        <td>Reactive</td>
        <td>Data Access</td>
        <td>Data Base</td>
+       <td>Security</td>
        <td>Integration</td>
        <td>Testing</td>
        <td>Overview</td>
@@ -18,6 +19,7 @@ Spring:
         <td>sr</td>
         <td>sda</td>
         <td>sdb</td>
+        <td>sc</td>
         <td>si</td>
         <td>st</td>
        <td>so</td>
