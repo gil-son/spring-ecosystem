@@ -29,6 +29,7 @@ Spring:
 Architecture:
 <table>
     <tr>
+       <td>Entity</td>
        <td>DTO</td>
        <td>DAO/Repository</td>
        <td>Controller/Resource</td>
@@ -37,6 +38,7 @@ Architecture:
        <td>Validation</td>
      </tr>
      <tr>
+        <td>ae</td>
         <td>adto</td>
         <td>adao</td>
         <td>ac</td>
