@@ -1,7 +1,6 @@
 # mini-projects
 
 
-1.0-ask-and-questions-
 
 Spring:
 <table>
