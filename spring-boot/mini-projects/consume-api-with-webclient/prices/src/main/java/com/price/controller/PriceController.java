@@ -16,6 +16,10 @@ import com.price.model.Price;
 @RequestMapping("/prices")
 public class PriceController {
 	
+	@GetMapping
+	public String test() {
+		return "Price";
+	}
 	
 	@GetMapping("/{code}")
 	public ResponseEntity<Price> isPrice(@PathVariable Long code){
@@ -24,17 +28,6 @@ public class PriceController {
 		
 		return ResponseEntity.ok(p1);
 	}
-	
-	
-	
-	
-	
-	@GetMapping
-	public String test() {
-		return "Price";
-	}
-	
-	
 	
 	
 }
