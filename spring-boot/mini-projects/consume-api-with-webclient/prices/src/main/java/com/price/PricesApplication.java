@@ -1,13 +1,13 @@
-package com.product.app;
+package com.price;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProductApplication {
+public class PricesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductApplication.class, args);
+		SpringApplication.run(PricesApplication.class, args);
 	}
 
 }
