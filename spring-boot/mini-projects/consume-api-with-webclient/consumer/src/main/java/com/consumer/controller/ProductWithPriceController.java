@@ -23,11 +23,11 @@ public class ProductWithPriceController {
 	@Autowired
 	private ProductWithPriceService productWithPriceService;
 	
-	@GetMapping("/products/{codde}/price")
+	@GetMapping("/products/{code}/price")
 	public ResponseEntity<ProductWithPrice> isProductWithPrice(@PathVariable Long code) 
 			throws Exception{
 		
-			ProductWithPrice productWithPrice = this.productWithPriceService.ProductWithPriceService();
+			ProductWithPrice productWithPrice = this.productWithPriceService.ProductWithPriceService(code);
 			
 			return ResponseEntity.ok(null);
 	}
