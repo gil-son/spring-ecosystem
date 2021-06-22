@@ -15,20 +15,27 @@ public class ProductWithPriceService {
 	@Autowired
 	private WebClient webClient;
 	
-	public ProductWithPrice ProductWithPriceService(Long codeProduct) {
-		
-	Mono<ProductWithPrice> monoProduct = this.webClient
+	public ProductWithPrice webClientProductWithPriceService(Long code) {
+	
+		// 3 seconds
+		Mono<ProductWithPrice> monoProduct = this.webClient
 		.method(HttpMethod.GET)
-		.uri("/products/{code}", codeProduct)
+		.uri("/products/{code}", code)
 		.retrieve()
 		.bodyToMono(ProductWithPrice.class);
 		
-		monoProduct.subscribe(p -> {
-			System.out.println("Actually/In fact, here it really was finished!");
-		});
+		// http://localhost:8081/products/{code} localhost:8081/products/1
+	
+		// 3 seconds
 		
-		System.out.println("Finalized");
-		return null;
+		// Other Mono
+		
+		
+		// more logic...
+		 ProductWithPrice productWithPrice = monoProduct.block();
+		
+	
+		return productWithPrice;
 	}
 	
 }
