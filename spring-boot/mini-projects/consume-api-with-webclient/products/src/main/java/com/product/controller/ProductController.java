@@ -26,8 +26,8 @@ public class ProductController {
 	public ResponseEntity<Product> isProduct(@PathVariable Long code) throws Exception {
 		
 		Product p1 = new Product(code, "Product 1", "It's is product 1");
-		Product p2 = new Product(code, "Product 2", "It's is product 2");
-		Product p3 = new Product(code, "Product 3", "It's is product 3");
+		// Product p2 = new Product(code, "Product 2", "It's is product 2");
+		// Product p3 = new Product(code, "Product 3", "It's is product 3");
 		
 		Thread.sleep(3000); // Require throws
 		

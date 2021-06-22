@@ -23,16 +23,12 @@ public class ProductWithPriceController {
 	@Autowired
 	private ProductWithPriceService productWithPriceService;
 	
-	@GetMapping("/products/{code}/price")
-	public ResponseEntity<ProductWithPrice> isProductWithPrice(@PathVariable Long code) 
-			throws Exception{
+	@GetMapping("/product/{code}/price")
+	public ResponseEntity<ProductWithPrice> isProductWithPrice(@PathVariable Long code){
 		
-			ProductWithPrice productWithPrice = this.productWithPriceService.ProductWithPriceService(code);
+			ProductWithPrice productWithPrice = this.productWithPriceService.webClientProductWithPriceService(code);
 			
-			return ResponseEntity.ok(null);
+			return ResponseEntity.ok(productWithPrice);
 	}
-	
-	
-	
 	
 }
