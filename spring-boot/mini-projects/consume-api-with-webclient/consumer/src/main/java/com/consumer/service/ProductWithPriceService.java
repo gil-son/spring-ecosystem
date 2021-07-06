@@ -13,12 +13,15 @@ import reactor.core.publisher.Mono;
 public class ProductWithPriceService {
 
 	@Autowired
-	private WebClient webClient;
+	private WebClient webClientProducts;
+	
+	@Autowired
+	private WebClient webClientPrices;
 	
 	public ProductWithPrice webClientProductWithPriceService(Long code) {
 	
 		// 3 seconds
-		Mono<ProductWithPrice> monoProduct = this.webClient
+		Mono<ProductWithPrice> monoProduct = this.webClientProducts
 		.method(HttpMethod.GET)
 		.uri("/products/{code}", code)
 		.retrieve()
@@ -30,12 +33,19 @@ public class ProductWithPriceService {
 		
 		// Other Mono
 		
+		Mono<ProductWithPrice> monoPrice = this.webClientPrices
+				.method(HttpMethod.GET)
+				.uri("/prices/{code}", code)
+				.retrieve()
+				.bodyToMono(ProductWithPrice.class);
+				
 		
 		// more logic...
-		 ProductWithPrice productWithPrice = monoProduct.block();
+		 ProductWithPrice product =  monoProduct.block();
+		 ProductWithPrice price =  monoPrice.block();
+		 product.setPrice(price.getPrice());
 		
-	
-		return productWithPrice;
+		 return product;
 	}
 	
 }

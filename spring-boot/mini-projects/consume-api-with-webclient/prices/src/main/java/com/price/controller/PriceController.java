@@ -11,15 +11,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.price.model.Price;
+import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/prices")
 public class PriceController {
 	
+	
 	@GetMapping
 	public String test() {
 		return "Price";
 	}
+	
 	
 	@GetMapping("/{code}")
 	public ResponseEntity<Price> isPrice(@PathVariable Long code){
@@ -28,6 +31,5 @@ public class PriceController {
 		
 		return ResponseEntity.ok(p1);
 	}
-	
 	
 }
