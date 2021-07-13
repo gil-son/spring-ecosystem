@@ -3,9 +3,9 @@ package com.eventwithguests.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.eventwithguests.entities.Guest;
+import com.eventwithguests.entities.Event;
 
 @Repository
-public interface EventRepository extends JpaRepository<Long, Guest> {
+public interface EventRepository extends JpaRepository<Long, Event> {
 
 }
