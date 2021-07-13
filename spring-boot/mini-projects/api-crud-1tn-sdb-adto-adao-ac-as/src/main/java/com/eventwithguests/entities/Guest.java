@@ -1,17 +1,24 @@
 package com.eventwithguests.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
-public class Guest {
+@Table(name = "tb_guest")
+public class Guest implements Serializable{
+	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String name;
-	private String local;
-	
+
 	@ManyToOne
 	private Event event;
 	
@@ -19,17 +26,10 @@ public class Guest {
 	
 	public Guest(String name, String local) {
 		this.name = name;
-		this.local = local;
 	}
 
 	public String getName() {return name;}
 
 	public void setName(String name) {this.name = name;}
 
-	public String getLocal() {return local;}
-
-	public void setLocal(String local) {this.local = local;}
-	
-	
-	
 }
