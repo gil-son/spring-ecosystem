@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.eventwithguests.entities.Event;
 
 @Repository
-public interface EventRepository extends JpaRepository<Long, Event> {
+public interface EventRepository extends JpaRepository<Event, Integer> {
 
 }
