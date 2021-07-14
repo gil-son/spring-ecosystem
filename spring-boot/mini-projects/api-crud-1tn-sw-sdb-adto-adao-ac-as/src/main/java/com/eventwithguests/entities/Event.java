@@ -39,5 +39,11 @@ public class Event implements Serializable{
 	public String getLocal() {return local;}
 
 	public void setLocal(String local) {this.local = local;}
+
+	public List<Guest> getGuests() {return guests;}
+
+	public void setGuests(List<Guest> guests) {this.guests = guests;}
+	
+	
 	
 }
