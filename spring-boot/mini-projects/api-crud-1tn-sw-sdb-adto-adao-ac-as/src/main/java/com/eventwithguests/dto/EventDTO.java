@@ -34,15 +34,22 @@ public class EventDTO implements Serializable{
 		}
 	}
 
-	public String getdescription() {return description;}
+	
+	
+	
+	public Integer getId() {return id;}
 
-	public void setdescription(String description) {this.description = description;}
+	public void setId(Integer id) {	this.id = id;}
+
+	public String getDescription() {return description;}
+
+	public void setDescription(String description) {this.description = description;}
 
 	public String getLocal() {return local;}
 
 	public void setLocal(String local) {this.local = local;}
 	
-	public List<GuestDTO> getList(){return guestsDTO;}
+	public List<GuestDTO> getGuest(){return guestsDTO;}
 	
 	
 }
