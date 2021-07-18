@@ -32,6 +32,14 @@
 			<artifactId>camel-spring-boot-starter</artifactId>
 			<version>3.11.0</version>
 		</dependency>
+		
+		<dependency>
+  			<groupId>org.apache.camel.springboot</groupId>
+  			<artifactId>camel-csv-starter</artifactId>
+  			<version>3.11.0</version>
+ 			 <!-- use the same version as your Camel core version -->
+		</dependency>
+		
 	</dependencies>
 
 	<build>
