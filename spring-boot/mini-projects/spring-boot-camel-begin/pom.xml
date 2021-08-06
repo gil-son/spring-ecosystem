@@ -2,26 +2,66 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.3</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
+	
 	<groupId>com.camel.freetech</groupId>
 	<artifactId>spring-boot-camel-begin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-camel-begin</name>
-	<description>spring boot with apache camel</description>
+
+	<name>camel-sports-api</name>
+
+	<description>Camel REST API with JSON support</description>
+
 	<properties>
 		<java.version>11</java.version>
-		<camel.version>3.11.0</camel.version>
+		<camel.version>3.9.0</camel.version>
+		<spring.boot-version>2.4.4</spring.boot-version>
+
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Spring Boot BOM -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot-version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- Camel BOM -->
+			<dependency>
+				<groupId>org.apache.camel.springboot</groupId>
+				<artifactId>camel-spring-boot-dependencies</artifactId>
+				<version>${camel.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.apache.camel.springboot</groupId>
 			<artifactId>camel-spring-boot-starter</artifactId>
-			<version>3.11.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-servlet-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-jackson-starter</artifactId>
 		</dependency>
 
 		<dependency>
