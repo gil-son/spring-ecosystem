@@ -22,8 +22,8 @@
 	
 	
 	<dependencyManagement>
-	    <dependencies>
-	    	<!-- Spring Boot BOM -->
+		<dependencies>
+			<!-- Spring Boot BOM -->
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
@@ -31,51 +31,38 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-	    
-	       <!-- Camel BOM -->
+			<!-- Camel BOM -->
 			<dependency>
 				<groupId>org.apache.camel.springboot</groupId>
 				<artifactId>camel-spring-boot-dependencies</artifactId>
 				<version>${camel.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
-        </dependency>
-        <!-- ... other BOMs or dependencies ... -->
-        
-        
-        <!-- Camel Starter -->
-        <dependency>
-            <groupId>org.apache.camel.springboot</groupId>
-            <artifactId>camel-spring-boot-starter</artifactId>
-        </dependency>
-        <!-- ... other dependencies ... -->
-        
-        <!-- ... other dependencies ... -->
-        <dependency>
-            <groupId>org.apache.camel.springboot</groupId>
-            <artifactId>camel-activemq-starter</artifactId>
-        </dependency>
-        
-    	</dependencies>
+			</dependency>
+		</dependencies>
 	</dependencyManagement>
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
 			<groupId>org.apache.camel.springboot</groupId>
 			<artifactId>camel-spring-boot-starter</artifactId>
-			<version>3.11.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-servlet-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-jackson-starter</artifactId>
 		</dependency>
 
 		<dependency>
