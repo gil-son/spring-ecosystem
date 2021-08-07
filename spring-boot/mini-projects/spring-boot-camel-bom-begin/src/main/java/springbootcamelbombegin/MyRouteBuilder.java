@@ -9,7 +9,7 @@ public class MyRouteBuilder extends RouteBuilder{
 
 	@Override
 	public void configure() throws Exception {
-		restConfiguration()
+	restConfiguration()
     	.component("servlet")
     	.bindingMode(RestBindingMode.auto); // received and convert JSON or XML 
 
@@ -22,10 +22,10 @@ public class MyRouteBuilder extends RouteBuilder{
                     "for all the person!"))
     .endRest()
     
-    .post("/")
+    .post("/").type(Person.class)
     .route()
     .to("log:mylogger?showAll=true")
-    .transform(simple("The Post method"))
+    .transform(simple("Thank you to submit a new person! : ${body.name}"))
     .endRest();
     
    
