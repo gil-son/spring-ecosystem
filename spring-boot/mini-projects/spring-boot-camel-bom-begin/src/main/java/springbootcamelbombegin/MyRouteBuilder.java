@@ -1,5 +1,7 @@
 package springbootcamelbombegin;
 
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.springframework.stereotype.Component;
@@ -25,7 +27,22 @@ public class MyRouteBuilder extends RouteBuilder{
     .post("/").type(Person.class)
     .route()
     .to("log:mylogger?showAll=true")
-    .transform(simple("Thank you to submit a new person! : ${body.name}"))
+   
+    // The process will generate the response
+    .process(new Processor() {
+
+		@Override
+		public void process(Exchange exchange) throws Exception {
+			Person person = exchange.getMessage().getBody(Person.class);
+			PersonResponse response = new PersonResponse();
+			response.setMessage("Thanks to submitting: "+person.getName());
+			// Insert record database goes here
+			exchange.getMessage().setBody(response);
+		}
+    	
+    })
+    
+    // .transform(simple("Thank you to submit a new person! : ${body.name}"))
     .endRest();
     
    
