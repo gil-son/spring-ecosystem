@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:dbmatrizero
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+#    data: classpath:import.sql
+#    schema: classpath:schema.sql
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
