@@ -1,18 +1,11 @@
 # Spring Ecosystem
 
 
-### Classic
+<div align="center">
 
-![image](https://ordina-jworks.github.io/img/spring-ecosystem/spring-classic.png)
+![image](https://user-images.githubusercontent.com/72712095/191304469-11edaf62-d296-42a2-9508-4254bf5bca71.png)
 
-
-### Popular
-
-![image](https://ordina-jworks.github.io/img/spring-ecosystem/spring-popular.png)
-
-### Other
-
-![image](https://ordina-jworks.github.io/img/spring-ecosystem/spring-other.png)
+</div>
 
 
 
