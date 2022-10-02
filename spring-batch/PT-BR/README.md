@@ -49,6 +49,49 @@ Uma das grandes dificuldades é o processamento desse grande lote de dados, algu
 	- normalmente se refere a interface gráfica do sistema, mas para o sistema batch se refere ao código em si
 	- o quão simples é mantê-los/ indentificarerros 
 
+
+## Ciclo de vida do Job
+
+<b>Job</b> pode ser definido como uma coleção de estados e transições de um para o outro definidos por steps = <b>máquina de estados</b>.
+
+O <b>Job</b> possui <b>3 steps</b>, cada step possui uma lógica interna de leitura, processamento e escrita:
+
+<div align="center">
+<img src="https://miro.medium.com/max/1400/1*bYMHRTsH7cMGv9GMXEXWGQ.png" width="50%"/>
+</div>
+
+Dependendo do resultado do processamento em vários blocos a máquina de estado vai mudando de estado, até chega ao estado final que
+indica que o processamento foi concluído.
+
+Então como o Spring Batch consegue fazer essa <b>máquina de estados</b> funcionar?
+
+Para que um job execute do início ao fim, vários componentes do spring-batch, entram em ação:
+
+No momento da execução do job, o <b>job launcher</b> é iniciado. Isso inclui também a reinicialização e validação de 
+parâmetros.
+
+Uma vez que o job é iniciado, o job executa os seus steps que possuem seu estado salvo no <b>job repository</b>.
+
+<div align="center">
+<img src="https://miro.medium.com/max/1400/1*IotPHxVJNyYea9t34G0wzg.png" width="50%"/>
+</div>
+
+Os dados desse repoitório, são chamados de <b>metadados</b> do spring-batch, são utilizados pelos componentes do framework para controla o fluxo
+de execução do job.
+
+Dentre os metadados deve possuir vários objetos associados chamados de jobs instance que representam que representam uma execução lógica do
+job, ou seja, uma execução da lógica do job do início ao fim, até obter sucesso. Até lá pode ocorrer diversas execuções físicas, com falhas
+e sucesso no final. Elas são representadas por um objeto chamado job execution.
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/72712095/193472119-383c1c39-7364-4c1e-8870-47702e3b745b.png" width="50%"/>
+</div>
+
+Resumindo, temos um job associado a diversas ações lógicas que estão associadas a  multiplas execuções físicas <b>(job execution)</b>. Outro fator que
+define a criação de um objeto <b>job instance</b>, são os parâmetros de execução. Como os parâmetros modificam a lógica, se eles mudarem, uma nova
+execução lógica será gerada, isto é, um <b>job instance</b>.
+
+
 <hr/>
 
 
