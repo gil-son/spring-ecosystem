@@ -54,6 +54,10 @@ Uma das grandes dificuldades é o processamento desse grande lote de dados, algu
 
 <b>Job</b> pode ser definido como uma coleção de estados e transições de um para o outro definidos por steps = <b>máquina de estados</b>.
 
+<div align="center">
+<img src="https://user-images.githubusercontent.com/72712095/193472510-1943fb9a-b115-404a-8327-ab92ddd03b44.png" width="50%"/>
+</div>
+
 O <b>Job</b> possui <b>3 steps</b>, cada step possui uma lógica interna de leitura, processamento e escrita:
 
 <div align="center">
