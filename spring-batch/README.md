@@ -14,8 +14,8 @@
     <td><a href="https://github.com/gil-son/dsmovie/tree/main/subtitled-by-language/English" ><img  width="20%" src="https://flagicons.lipis.dev/flags/4x3/us.svg" /></a></td>
   </tr>
   <tr>
-    <td><a href="" >Ler em Português brasileiro</a></td>
-    <td><a href="" >English reading</a></td> 
+    <td><a href="https://github.com/gil-son/spring-ecosystem/tree/main/spring-batch/PT-BR" >Ler em Português brasileiro</a></td>
+    <td><a href="https://github.com/gil-son/spring-ecosystem/tree/main/spring-batch/ENG-US" >English reading</a></td> 
   </tr>
 </table> 
 
