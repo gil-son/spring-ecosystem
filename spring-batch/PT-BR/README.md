@@ -83,7 +83,7 @@ Uma vez que o job é iniciado, o job executa os seus steps que possuem seu estad
 Os dados desse repoitório, são chamados de <b>metadados</b> do spring-batch, são utilizados pelos componentes do framework para controla o fluxo
 de execução do job.
 
-Dentre os metadados deve possuir vários objetos associados chamados de jobs instance que representam que representam uma execução lógica do
+Dentre os metadados deve possuir vários objetos associados chamados de jobs instance que representam uma execução lógica do
 job, ou seja, uma execução da lógica do job do início ao fim, até obter sucesso. Até lá pode ocorrer diversas execuções físicas, com falhas
 e sucesso no final. Elas são representadas por um objeto chamado job execution.
 
