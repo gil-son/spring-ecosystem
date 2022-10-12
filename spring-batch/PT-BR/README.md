@@ -95,6 +95,35 @@ Resumindo, temos um job associado a diversas ações lógicas que estão associa
 define a criação de um objeto <b>job instance</b>, são os parâmetros de execução. Como os parâmetros modificam a lógica, se eles mudarem, uma nova
 execução lógica será gerada, isto é, um <b>job instance</b>.
 
+## Banco de Dados
+
+Seja qual for o Banco de Dados (Postgres, MySQL, MongoDB, ...) é necessário configurar no application.properties/yaml. Com isso, ao executar um Job, o Spring Batch vai criar as seguintes tabelas com a inicial BATCH para gerenciar:
+ 	
+- VISÃO DE ALTO NÍVEL DOS METADADOS
+	- BATCH_JOB_EXECUTION:
+		- quantidade de vezes que o Batch executou no total (inclui acertos e falhas)
+		- quando o Job iníciou e encerrou
+		- status atual do Job
+	- BATCH_JOB_EXECUTION_CONTEXT
+		- informações do contexto de utilização daquele Job (regras de negócio/lógicas)
+	- BATCH_JOB_EXECUTION_PARAMS
+		- informações do parametro
+	- BATCH_JOB_EXECUTION_SEQ
+		- informações da sequência executada
+	- BATCH_JOB_INSTANCE
+		- quantidades de vezes o Batch executou com sucesso / quantidades lógicas do Batch
+		- nome do Job
+	- BATCH_JOB_SEQ
+		- informações da sequência executada
+- VISÃO DE BAIXO NÍVEL DOS METADADOS
+	- BATCH_STEP_EXECUTION
+		- ver as step(s) que executaram
+		- início e fim do Step
+		- status do Step
+	- BATCH_JOB_EXECUTION_CONTEXT
+		- informações do contexto daquele Step que são importantes para indentificar a lógica/ contexto (está em chave valor)
+	- BATCH_JOB_EXECUTION_SEQ
+		- informações da sequência executada
 
 <hr/>
 
