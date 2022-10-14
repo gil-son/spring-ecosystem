@@ -125,6 +125,45 @@ Seja qual for o Banco de Dados (Postgres, MySQL, MongoDB, ...) é necessário co
 	- BATCH_JOB_EXECUTION_SEQ
 		- informações da sequência executada
 
+
+## Tipos de Steps
+
+Um Job é definido por uma sequência encadeada de Steps e que cada Step tem a sua própria lógica
+
+<div align="center">
+<img src="https://atitudereflexiva.files.wordpress.com/2019/10/spring-batch-job-model.png" width="50%"/>
+</div>
+
+Para manter o estado auto-contido, o Step possue um component chamado de StepExecution que representa uma execução física do Step, associada a uma execução 
+física do Job. Step execution, armazena informações úteis, como o número de leituras e escritas associadas a sua execução. Tudo isso para facilitar o monitoramento,
+análise da execução e reinicialização do Job.
+
+A forma na qual o Step define a sua lógica, o categoriza como o tipo <b>Tasklet</b> ou do tipo<b>Chunk</b>:
+
+- Tasklets são usadas para pequenas tarefas e executa repetidamente até o status de completude
+	- pré-processamento que precisam de um único comando para executar, como
+		- limpeza de arquivos, criação de diretórios, ...
+	
+- Chunks são utilizados para processamentos mais complexos que precisam ser realizados em pedaços:
+	- Leitura (ItemReader)
+	- ItemProcessor
+	- ItemWriter
+
+
+ Cada Chunk possui a sua própria transação. Isso significa que se ocorrer algum problema durante o processamento, todo o processamento feito no Chunks anteriores
+ estará a salvo. Imagina só iniciar um processamento massivo de dados e ocorrer uma falha perto do fim? Seria necessário reprocessar tudo, se não fosse utilizado
+ os Chunks.
+ 
+ O fluxo do Chunk é ilustrado nessa figura:
+ 
+<div align="center">
+<img src="https://thumbs2.imgbox.com/dd/03/YIbjQJvQ_t.png" width="50%"/>
+</div>
+
+ 
+ O framework gerencia cada Chunk que por sua vez começa invocando a leitura de uma coleção de dados. Cada um desses dados vai passar por um processador (process()). E, finalmente a coleção de dados processados, será passada ao escritor (write()). O que define o tamanho desse Chunk é o commit interval que vai informar quantos items serão lidos e escritos em uma única transação.
+ 
+ 
 <hr/>
 
 
