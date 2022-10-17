@@ -1,0 +1,10 @@
+spring:
+  batch:
+    initialize-schema: always
+    jdbc.initialize-schema: always
+  datasource:
+    platform: postgres
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/db_terminal
+    username: postgres
+    password: matrizero
