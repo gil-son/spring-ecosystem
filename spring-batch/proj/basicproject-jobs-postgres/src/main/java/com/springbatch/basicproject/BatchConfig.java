@@ -42,7 +42,7 @@ public class BatchConfig {
                 .build();
     }
     @Bean
-    @StepScope
+    @StepScope // CLI/program arguments, insert name=Gil
     public Tasklet printHelloTasklet(@Value("#{jobParameters['name']}") String name){
 
         return new Tasklet() {

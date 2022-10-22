@@ -46,7 +46,7 @@ public class BatchConfig {
                 .get("printEvenOrOddStep")
 
                 // <reade an Integer, write a String>chunk(sizeChunk)
-                .<Integer, String>chunk(1)// 1 register by parte
+                .<Integer, String>chunk(3)// 1 register by parte
 
                 // reader() and writer() ever required, processor() is optional
                 .reader(countUntilTenReader()) // receive a collection
