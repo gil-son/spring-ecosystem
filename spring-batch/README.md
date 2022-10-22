@@ -25,7 +25,7 @@
 
 
 
-### Sources
+### References
 
 <ul>
   <li><a href="https://docs.spring.io/spring-batch/docs/current/reference/html/domain.html#domainLanguageOfBatch">Spring - The Domain Language of Batch</li>
