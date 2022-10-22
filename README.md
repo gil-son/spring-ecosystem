@@ -14,7 +14,7 @@
 
 
 
-### Sources
+### References
 
 <ul>
   <li><a href="https://spring.io/projects">Spring.io</li>
