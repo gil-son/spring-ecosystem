@@ -28,5 +28,8 @@
 ### Sources
 
 <ul>
+  <li><a href="https://docs.spring.io/spring-batch/docs/current/reference/html/domain.html#domainLanguageOfBatch">Spring - The Domain Language of Batch</li>
   <li><a href="https://giuliana-bezerra.medium.com/spring-batch-para-desenvolvimento-de-jobs-1674ec5b9a20">Medium - Spring Batch</li>
+  <li><a href="https://giuliana-bezerra.medium.com/desenvolvimento-com-spring-batch-jobs-b4363dd6c676">Medium - Desenvolvimento com Spring Batch — Jobs</li>
+  <li><a href="https://giuliana-bezerra.medium.com/desenvolvimento-com-spring-batch-steps-4d42af2696ec">Medium - Desenvolvimento com Spring Batch — Steps</li>
 </ul>
