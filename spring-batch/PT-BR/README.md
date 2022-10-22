@@ -176,7 +176,7 @@ A forma na qual o Step define a sua lógica, o categoriza como o tipo <b>Tasklet
 	select * from BATCH_STEP_EXECUTION;
  ```
  
- vai constar o valor de cada ("item a ser processado" / tamanho_chunck_em_memória) + 1, ou seja, (N / tamanho_chunck_em_memória) + 1. Isso tudo tem um custo, onde cada dado:
+ vai constar o valor de cada item a ser processado em relação ao tamanho do chunck em memória. Isso tudo tem um custo, onde cada dado:
  
  - Foi lido, processado e escrito
  - O banco monta uma estrutura de sendbox para trabalhar com o(s) envio(s)
@@ -194,11 +194,16 @@ A forma na qual o Step define a sua lógica, o categoriza como o tipo <b>Tasklet
  
  É quase que um teste impírico para descobrir o valor adequado do commit-interval, lembrar de otimizar ao máximo, para evitar transações desnecessárias e também considerar os recursos que a máquina tem de memória disponível
  
+Nem sempre é possível definir um tamanho de chunk. Se quiser definir o tamanho dinamicamente, 
+podemos implementar uma <a href="https://stackoverflow.com/questions/37390602/spring-batch-custom-completion-policy-for-dynamic-chunk-size">CompletionPolicy</a>
+ 
+ 
 <hr/>
 
 
-### Sources
+### References
 
 <ul>
   <li><a href="https://giuliana-bezerra.medium.com/spring-batch-para-desenvolvimento-de-jobs-1674ec5b9a20">Medium - Spring Batch</li>
+  <li><a href="https://stackoverflow.com/questions/37390602/spring-batch-custom-completion-policy-for-dynamic-chunk-size">Spring Batch custom completion policy for dynamic chunk size</li>
 </ul>
