@@ -163,6 +163,36 @@ A forma na qual o Step define a sua lógica, o categoriza como o tipo <b>Tasklet
  
  O framework gerencia cada Chunk que por sua vez começa invocando a leitura de uma coleção de dados. Cada um desses dados vai passar por um processador (process()). E, finalmente a coleção de dados processados, será passada ao escritor (write()). O que define o tamanho desse Chunk é o commit interval que vai informar quantos items serão lidos e escritos em uma única transação.
  
+ ## Sobre commit-Interval
+ 
+ Durante a criação de um Step, é necessário definir/configurar o tamanho do Chunk daquela operação. E, isso deve ser feito considerando a quantidade de dados e também de memória:
+ 
+ ```
+ .<Integer, String>chunk(1)
+ ```
+ Se analisar o banco na tabela onde guarda esse valor:
+ 
+ ```
+	select * from BATCH_STEP_EXECUTION;
+ ```
+ 
+ vai constar o valor de cada ("item a ser processado" / tamanho_chunck_em_memória) + 1, ou seja, (N / tamanho_chunck_em_memória) + 1. Isso tudo tem um custo, onde cada dado:
+ 
+ - Foi lido, processado e escrito
+ - O banco monta uma estrutura de sendbox para trabalhar com o(s) envio(s)
+ - Rodar as consultas sem commitar os resultado(s)
+ - Segurar em memória
+ - Commitar os resultados
+ 
+ Isso é considerado para não prejudicar a performance do Job
+ 
+ 
+  Não tem um cálculo exato, mas aproximado, pois varia de cenário para cenário. Então, é necessário estudar:
+  
+  - O ambiente de implantação que vai rodar o Batch
+  - A máquina que vai executar as operações possui quanto de memória? Qual o desempenho dela?
+ 
+ É quase que um teste impírico para descobrir o valor adequado do commit-interval, lembrar de otimizar ao máximo, para evitar transações desnecessárias e também considerar os recursos que a máquina tem de memória disponível
  
 <hr/>
 
