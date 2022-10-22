@@ -176,7 +176,7 @@ A forma na qual o Step define a sua lógica, o categoriza como o tipo <b>Tasklet
 	select * from BATCH_STEP_EXECUTION;
  ```
  
- vai constar o valor de cada item a ser processado em relação ao tamanho do chunck em memória. Isso tudo tem um custo, onde cada dado:
+ vai constar o valor de cada item a ser processado em relação ao tamanho do chunck em memória e o tempo de execução. Isso tudo tem um custo, onde cada dado:
  
  - Foi lido, processado e escrito
  - O banco monta uma estrutura de sendbox para trabalhar com o(s) envio(s)
