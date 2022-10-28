@@ -1,0 +1,14 @@
+2022-10-28 20:55:58,608 INFO l.l.l.l.l.BasicprojectApplication [main] Starting BasicprojectApplication using Java 11.0.16 on IBM-PF348LWK with PID 26408 (C:\Users\009967631\Desktop\repo\spring\spring-ecosystem\spring-batch\proj\basicproject-jobs-postgres-tasklet-envrioment-var-multi-databases-log4j-refactor\target\classes started by 009967631 in C:\Users\009967631\Desktop\repo\spring\spring-ecosystem\spring-batch\proj\basicproject-jobs-postgres-tasklet-envrioment-var-multi-databases-log4j-refactor)
+2022-10-28 20:55:58,613 INFO l.l.l.l.l.BasicprojectApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-10-28 20:55:59,197 INFO l.l.l.l.ConfigurationClassEnhancer [main] @Bean method PropsConfig.configurer is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2022-10-28 20:55:59,416 INFO l.l.l.HikariDataSource [main] HikariPool-1 - Starting...
+2022-10-28 20:55:59,858 INFO l.l.l.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-10-28 20:55:59,937 INFO l.l.l.l.l.l.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: POSTGRES
+2022-10-28 20:56:00,145 INFO l.l.l.l.l.l.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2022-10-28 20:56:00,247 INFO l.l.l.l.l.BasicprojectApplication [main] Started BasicprojectApplication in 2.261 seconds (JVM running for 3.382)
+2022-10-28 20:56:00,422 INFO l.l.l.l.l.l.SimpleJobLauncher [main] Job: [SimpleJob: [name=printHelloJob]] launched with the following parameters: [{run.id=6}]
+2022-10-28 20:56:00,474 INFO l.l.l.l.l.SimpleStepHandler [main] Executing step: [printHelloStep]
+2022-10-28 20:56:00,509 INFO l.l.l.l.l.AbstractStep [main] Step: [printHelloStep] executed in 35ms
+2022-10-28 20:56:00,530 INFO l.l.l.l.l.l.SimpleJobLauncher [main] Job: [SimpleJob: [name=printHelloJob]] completed with the following parameters: [{run.id=6}] and the following status: [COMPLETED] in 76ms
+2022-10-28 20:56:00,537 INFO l.l.l.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-10-28 20:56:00,551 INFO l.l.l.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

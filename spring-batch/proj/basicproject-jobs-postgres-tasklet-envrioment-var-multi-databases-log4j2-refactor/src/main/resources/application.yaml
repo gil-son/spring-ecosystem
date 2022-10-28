@@ -1,0 +1,16 @@
+#spring:
+#  batch:
+#    initialize-schema: always
+#    jdbc.initialize-schema: always
+#  datasource:
+#    platform: postgres
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/dbmatrizero
+#    username: postgres
+#    password: matrizero
+
+
+# PropsConfig -> etc/config/printhellojob/application.yaml
+
+logging:
+  config: etc/config/printhellojob/log4j.xml
