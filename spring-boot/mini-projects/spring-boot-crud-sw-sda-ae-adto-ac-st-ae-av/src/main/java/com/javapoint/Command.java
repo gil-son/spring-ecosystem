@@ -1,20 +1,17 @@
 package com.javapoint;
 
 import com.javapoint.entity.Books;
-import com.javapoint.service.BooksService;
+import com.javapoint.service.BooksServiceNoValidated;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Configuration
 public class Command implements ApplicationRunner {
 
     @Autowired
-    BooksService booksService;
+    BooksServiceNoValidated booksService;
 
     @Override
     public void run(ApplicationArguments applicationArguments) throws Exception {

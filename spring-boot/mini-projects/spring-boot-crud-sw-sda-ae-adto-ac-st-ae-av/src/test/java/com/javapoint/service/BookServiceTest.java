@@ -16,7 +16,7 @@ public class BookServiceTest {
 
 
     @InjectMocks // Inject the created instances from mocks
-    private BooksService booksService;
+    private BooksServiceNoValidated booksService;
 
     @MockBean // Execute mock from
     private BooksRepository booksRepository;

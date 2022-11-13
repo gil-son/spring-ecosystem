@@ -2,7 +2,7 @@ package com.javapoint.controller;
 
 
 import com.javapoint.entity.Books;
-import com.javapoint.service.BooksService;
+import com.javapoint.service.BooksServiceNoValidated;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,14 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-
-//mark class as Controller
 @RestController
-public class BooksController
+public class BooksControllerNoValidated
 {
     //autowire the BooksService class
     @Autowired
-    BooksService booksService;
+    BooksServiceNoValidated booksService;
+
 
     //creating a get mapping that retrieves all the books detail from the database
     @GetMapping("/book")
@@ -52,6 +51,7 @@ public class BooksController
         return books.getBookid();
     }
 
+
     //creating put mapping that updates the book detail
     @PutMapping("/book")
     private Books update(@RequestBody Books books)
@@ -59,4 +59,6 @@ public class BooksController
         booksService.saveOrUpdate(books);
         return books;
     }
+
+
 }
