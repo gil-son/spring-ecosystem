@@ -41,7 +41,7 @@ public class UserResource {
 	@GetMapping("/users/{id}")
 	public EntityModel<User> retrieveUser(@PathVariable int id) {
 		User user = service.findOne(id);
-		
+
 		if(user==null)
 			throw new UserNotFoundException("id:"+id);
 		
@@ -66,7 +66,7 @@ public class UserResource {
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest()
 						.path("/{id}")
 						.buildAndExpand(savedUser.getId())
-						.toUri();   
+						.toUri();   // Show in the Headers when receive the response
 		
 		return ResponseEntity.created(location).build();
 	}
