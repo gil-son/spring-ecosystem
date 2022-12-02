@@ -51,20 +51,28 @@ public class UserController {
 
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String username;
-        //Boolean role = Boolean.FALSE;
+        Boolean role = Boolean.FALSE;
 
         if (principal instanceof UserDetails) {
              username = ((UserDetails)principal).getUsername();
-             //role = ((UserDetails)principal).getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ADMIN"));
+             role = ((UserDetails)principal).getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"));
         } else {
              username = principal.toString();
         }
 
+//        System.out.println("ADMIN:"+role);
+//        System.out.println("PRINCIPAL:"+principal.toString());
 //        System.out.println("THE NAME: "+userDetailsServiceImpl.loadUserByUsername(dto.getUsername()));
 //        System.out.println("THE DTO: "+dto.getUsername());
 //        System.out.println("THE NAME: "+username);
 
-        if(!dto.getUsername().equals(username) ){
+
+        if(role){
+
+            return ResponseEntity.ok().body(dto);
+        }
+
+        if( (!dto.getUsername().equals(username))){
             throw new AuthenticationServiceException("User not Authorized");
         }
 
