@@ -18,7 +18,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.management.relation.Role;
+import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Transactional // Necessary to load the database with relationship or modify the relationship to Eager
 @Service
@@ -47,6 +50,20 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     // Controller
 
+    @Transactional(readOnly = true)
+    public List<UserModelDto> findAll() {
+
+        List<UserModel> list = userRepository.findAll();
+
+        // Lambda
+        List<UserModelDto> listDTO = list.stream().map( x -> new UserModelDto(x)).collect(Collectors.toList());
+
+        return listDTO;
+    }
+
+
+
+
     //@Transactional
     public UserModelDto insert(UserModelDto dto) {
         UserModel entity = new UserModel();
@@ -56,6 +73,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         System.out.println("Entity value: "+entity.getRoles());
         System.out.println("Entity value: "+dto.getRoles().get(0).getRoleId());
+        System.out.println("DTO Password: "+dto.getPassword());
 
         copyDtoToEntity(dto, entity);
         entity.setPassword(new BCryptPasswordEncoder().encode(dto.getPassword()));
@@ -82,6 +100,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     }
 
 
+    //@Transactional(readOnly = true)
+    public UserModelDto findById(UUID id) {
+        Optional<UserModel> obj =  userRepository.findById(id);
 
+        UserModel entity = obj.orElseThrow( () -> new UsernameNotFoundException("User Not Found with username"));
 
+        return new UserModelDto(entity);
+    }
 }

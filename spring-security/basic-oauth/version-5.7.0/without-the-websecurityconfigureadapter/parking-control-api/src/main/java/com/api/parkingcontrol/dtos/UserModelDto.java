@@ -32,6 +32,7 @@ public class UserModelDto implements Serializable {
     public UserModelDto(UserModel entity) {
         userId = entity.getUserId();
         username = entity.getUsername();
+        password = entity.getPassword();
         entity.getRoles().forEach(role -> this.roles.add(new RoleModelDto(role)));
     }
 
