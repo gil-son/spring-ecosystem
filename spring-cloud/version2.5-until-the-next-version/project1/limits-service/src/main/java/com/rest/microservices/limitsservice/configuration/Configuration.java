@@ -1,18 +1,14 @@
-package com.rest.microservices.limitsservice.bean;
+package com.rest.microservices.limitsservice.configuration;
 
-public class Limits {
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
+@Component
+@ConfigurationProperties("limits-service") // from application.properties
+public class Configuration {
     private int minimum;
     private int maximum;
 
-    public Limits(){
-        
-    }
-
-    public Limits(int minimum, int maximum) {
-        this.minimum = minimum;
-        this.maximum = maximum;
-    }
 
     public int getMinimum() {
         return minimum;
