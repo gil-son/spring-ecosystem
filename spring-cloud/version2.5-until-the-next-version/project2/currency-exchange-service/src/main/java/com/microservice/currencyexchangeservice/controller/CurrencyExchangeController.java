@@ -19,6 +19,8 @@ public class CurrencyExchangeController {
     @Autowired
     private Environment environment;
 
+    // That microservice work with the project1 https://github.com/gil-son/spring-ecosystem/tree/main/spring-cloud/version2.5-until-the-next-version/project1/spring-cloud-config-server
+
             // "http://localhost:8000/currency-exchange/from/USD/to/INR" //8001
     @GetMapping("/currency-exchange/from/{from}/to/{to}")
     public CurrencyExchange retrieveExchangeValue(@PathVariable String from,
