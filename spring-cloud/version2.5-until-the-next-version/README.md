@@ -13,7 +13,16 @@ the project2 access:
 
 and will get Config Server from project1
 
-the project1 has the cloud configs
+the project1 has the cloud configs:
+
+- ```http://localhost:8080/limits```
+- ```http://localhost:8888/microservice-x/default```
+- ```http://localhost:8888/microservice-x/dev```
+- ```http://localhost:8888/limits-service/dev```
+- ```http://localhost:8888/limits-service/qa```
+
+
+
 
 ### Source
 
