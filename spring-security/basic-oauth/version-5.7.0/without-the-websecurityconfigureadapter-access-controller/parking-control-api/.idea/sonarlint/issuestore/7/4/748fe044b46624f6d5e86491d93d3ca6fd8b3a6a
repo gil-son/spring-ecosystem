@@ -1,0 +1,13 @@
+
+Z
+java:S2583G"DChange this condition so that it does not always evaluate to "false"(¿Ï¨Ù
+Q	java:S1257"<This block of commented-out lines of code should be removed.(¶¡ÓÅ
+S	java:S106<"9Replace this use of System.out or System.err by a logger.(Ôˇ∞Ä˚ˇˇˇˇ
+N	java:S106H"9Replace this use of System.out or System.err by a logger.(≠õÁÖ
+Z
+java:S1128
+"8Remove this unused import 'org.modelmapper.ModelMapper'.(Ûèø‘˙ˇˇˇˇ8˚û°ºÃ0
+Ñ
+java:S1128"gRemove this unused import 'org.springframework.security.authentication.AuthenticationServiceException'.(†¸ˆÔ8˚û°ºÃ0
+s
+java:S1128"VRemove this unused import 'org.springframework.security.core.AuthenticationException'.(§Úõø8¸û°ºÃ0
