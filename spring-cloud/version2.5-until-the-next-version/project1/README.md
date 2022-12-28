@@ -11,7 +11,7 @@
 
 ## project spring-cloud-config-server
 
-That microservice contain the configuration to cloud. Use the git-localconfig the choose the configs. The limits-service, is used to practice.
+That microservice contain the configuration to cloud. Use the git-localconfig the choose the configs. The limits-service can be combined with spring-cloud-config-server.
 
 ### need for centralized configuration
 
