@@ -9,11 +9,11 @@
 
 <div align="center"><img src="https://thumbs2.imgbox.com/da/57/Fv0Y91PJ_t.png" /></div>
 
-## project spring-cloud-config-server
+## Project spring-cloud-config-server
 
 That microservice contain the configuration to cloud. Use the git-localconfig the choose the configs. The limits-service can be combined with spring-cloud-config-server.
 
-### need for centralized configuration
+### Need for centralized configuration
 
 <div align="center"><img src="https://thumbs2.imgbox.com/6d/fe/JDgTdTcV_t.png" alt="image host"/></div>
 
@@ -35,7 +35,7 @@ That microservice contain the configuration to cloud. Use the git-localconfig th
 - ```http://localhost:8888/limits-service/qa```
 
 
-## project currency-exchange-service
+## Project currency-exchange-service
 
 That project access the spring-cloud-config-server to get configs.
 
@@ -53,7 +53,8 @@ response by GET method:
 }
 ```
 
-## project currency-conversion-service
+
+## Project currency-conversion-service
 
 
 That project access the currency-exchange-service to get one or more microservices.
@@ -78,7 +79,7 @@ response by GET method:
 }
 ```
 
-### naming server
+### naming-server
 
 That project can be manager one or more endpoints/microservices from currency-exchange-service and send to currency-conversion-service. Work with Load Balancing.
 
@@ -89,6 +90,33 @@ That project can be manager one or more endpoints/microservices from currency-ex
 
 <div align="center"><img src="https://thumbs2.imgbox.com/23/6b/i71KSqCs_t.png" /></div>
 
+
+### Project api-gateway
+
+In the previous few steps, we implemented currency-conversion-service, currency-exchange-service, limits-service (all microservices) and typical microservices
+architectures. There would be hundreads of microservices like these and these microservice have a lot of common features: authentication, authorization, logging,
+rate limiting... Where do you implement all these common features? Well, the solution is an API gateway. In this case Spring Cloud Gateway
+
+
+
+
+### Usage
+
+1. start the spring-cloud-config-server, currency-conversion-service, currency-exchange-service and naming-server
+
+2. In currency-conversion-service, create more microservices:
+
+<div align="center"><img src="https://thumbs2.imgbox.com/83/e2/STTyN52X_t.png" /></div>
+<div align="center"><img src="https://thumbs2.imgbox.com/09/33/MfmDLEvy_t.png" /></div>
+
+3. Look in the naming server
+
+<div align="center"><img src="https://thumbs2.imgbox.com/4a/3f/88w6NpNK_t.png" /></div>
+
+4. Test call the endpoint and see Eureka with Load Balance in action
+
+<div align="center"><img src="https://thumbs2.imgbox.com/13/97/Q6Z8yAs4_t.png" /></div>
+<div align="center"><img src="https://thumbs2.imgbox.com/b6/e9/F1BUagQZ_t.png" /></div>
 
 # Source
 
