@@ -9,9 +9,13 @@
 
 <div align="center"><img src="https://thumbs2.imgbox.com/da/57/Fv0Y91PJ_t.png" /></div>
 
+## limits-service
+
+The limits-service is the local to create the variables to different scenarios
+
 ## Project spring-cloud-config-server
 
-That microservice contain the configuration to cloud. Use the git-localconfig the choose the configs. The limits-service can be combined with spring-cloud-config-server.
+That microservice contain the configuration to cloud. Use the git-localconfig the choose the configs. The limits-service is combined with spring-cloud-config-server.
 
 ### Need for centralized configuration
 
@@ -97,12 +101,19 @@ In the previous few steps, we implemented currency-conversion-service, currency-
 architectures. There would be hundreads of microservices like these and these microservice have a lot of common features: authentication, authorization, logging,
 rate limiting... Where do you implement all these common features? Well, the solution is an API gateway. In this case Spring Cloud Gateway
 
+<div align="center"><img src="https://thumbs2.imgbox.com/99/e8/8WRfTZZJ_t.png" /></div>
+
+
+
+### Circuit Breaker
+
+<div align="center"><img src="https://thumbs2.imgbox.com/f4/6c/HQqSIgiF_t.png" /></div>
 
 
 
 ### Usage
 
-1. start the spring-cloud-config-server, currency-conversion-service, currency-exchange-service and naming-server
+1. start the limits-service, spring-cloud-config-server, currency-conversion-service, currency-exchange-service and naming-server
 
 2. In currency-conversion-service, create more microservices:
 
