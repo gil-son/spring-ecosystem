@@ -129,6 +129,19 @@ rate limiting... Where do you implement all these common features? Well, the sol
 <div align="center"><img src="https://thumbs2.imgbox.com/13/97/Q6Z8yAs4_t.png" /></div>
 <div align="center"><img src="https://thumbs2.imgbox.com/b6/e9/F1BUagQZ_t.png" /></div>
 
+5. Test the routes with Load Blancing:
+
+```
+http://localhost:8765/get
+http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10
+http://localhost:8765/currency-conversion-new/from/USD/to/INR/quantity/10
+http://localhost:8765/currency-conversion-rest-template/from/USD/to/INR/quantity/10
+http://localhost:8765/currency-exchange/currency-exchange/from/EUR/to/INR
+http://localhost:8765/currency-conversion/currency-conversion-feign/from/USD/to/INR/quantity/10
+http://localhost:8765/currency-conversion/currency-conversion-rest-template/from/USD/to/INR/quantity/10
+```
+
+
 # Source
 
 <ul>
