@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
+      http://www.liquibase.org/xml/ns/pro
+      http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
+
+    <changeSet id="1" author="gil-son" >
+        <createTable tableName="guy">
+            <column  name="id"  type="INTEGER" autoIncrement="true">
+                <constraints  nullable="false"  primaryKey="true"  unique="true"/>
+            </column>
+            <column  name="name"  type="VARCHAR(255)" />
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="gil-son">
+        <createSequence sequenceName="sq_guy" incrementBy="1" startValue="1"/>
+    </changeSet>
+
+    <changeSet id="3" author="gil-son">
+        <createTable tableName="address">
+            <column name="id"  autoIncrement="true" type="INTEGER">
+                <constraints  nullable="false"  primaryKey="true"/>
+            </column>
+            <column  name="street"  type="VARCHAR(255)" />
+            <column  name="city"  type="VARCHAR(255)" />
+            <column  name="sate"  type="VARCHAR(255)" />
+            <column  name="guy_id"  type="INTEGER">
+                <constraints foreignKeyName="fk_guy_id" references="guy(id)" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="4" author="gil-son">
+        <createSequence sequenceName="sq_address" incrementBy="1" startValue="1"/>
+    </changeSet>
+</databaseChangeLog>
