@@ -68,6 +68,7 @@ That project access the currency-exchange-service to get one or more microservic
 
 - ```http://localhost:8100/currency-conversion-rest-template/from/USD/to/INR/quantity/10```
 - ```http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10 ```
+- ```http://localhost:8000/sample-api```
 
 response by GET method:
 
@@ -141,6 +142,33 @@ http://localhost:8765/currency-conversion/currency-conversion-feign/from/USD/to/
 http://localhost:8765/currency-conversion/currency-conversion-rest-template/from/USD/to/INR/quantity/10
 ```
 
+6. Testing a lot of requests to localhost:8000/sample-api. 
+
+(If you are on windows, you can try firing in 100-200 quick requests from the browser by quicklyrefreshing)
+
+curl:
+
+```
+curl http://localhost:8000/sample-api
+```
+
+in unix SO, you cam watch + curl:
+
+```
+watch curl http://localhost:8000/sample-api
+```
+
+number of request by second(s):
+
+```
+watch -n 0.1 http://localhost:8000/sample-api
+```
+
+7. Testing rate limiter
+
+```
+curl http://localhost:8000/sample-api
+```
 
 # Source
 
