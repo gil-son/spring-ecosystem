@@ -24,3 +24,11 @@
   <li><a href="https://www.algoworks.com">Algoworks</a></li>
 
 </ul>
+
+
+### Resources:
+
+<ul>
+  <li><a href="https://start.spring.io/">Spring Initializr</li>
+  <li><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html">Spring Properties</li>
+</ul>
