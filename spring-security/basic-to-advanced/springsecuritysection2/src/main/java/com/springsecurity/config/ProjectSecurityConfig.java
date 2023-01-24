@@ -14,11 +14,20 @@ public class ProjectSecurityConfig {
 
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception{
-        http.authorizeHttpRequests()
+
+        /* Below is the custom security configurations*/
+
+        /*http.authorizeHttpRequests()
                 .requestMatchers("/myAccount", "/myBalance", "/myCards", "/myLoans").authenticated()
                 .requestMatchers("/notices", "/contact").permitAll()
                 .and().formLogin()
                 .and().httpBasic();
+        return http.build();*/
+
+        http.authorizeHttpRequests().anyRequest().denyAll()
+                .and().formLogin()
+                .and().httpBasic();
         return http.build();
+
     }
 }
