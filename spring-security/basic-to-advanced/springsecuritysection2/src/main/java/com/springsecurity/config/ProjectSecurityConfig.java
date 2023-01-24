@@ -17,16 +17,24 @@ public class ProjectSecurityConfig {
 
         /* Below is the custom security configurations*/
 
-        /*http.authorizeHttpRequests()
+        http.authorizeHttpRequests()
                 .requestMatchers("/myAccount", "/myBalance", "/myCards", "/myLoans").authenticated()
                 .requestMatchers("/notices", "/contact").permitAll()
                 .and().formLogin()
                 .and().httpBasic();
-        return http.build();*/
 
-        http.authorizeHttpRequests().anyRequest().denyAll()
+        /* Configuration to deny all the requests */
+
+        /*http.authorizeHttpRequests().anyRequest().denyAll()
                 .and().formLogin()
-                .and().httpBasic();
+                .and().httpBasic();*/
+
+        /* Configuration to deny all the requests */
+
+        /*http.authorizeHttpRequests().anyRequest().permitAll()
+                .and().formLogin()
+                .and().httpBasic();*/
+
         return http.build();
 
     }
