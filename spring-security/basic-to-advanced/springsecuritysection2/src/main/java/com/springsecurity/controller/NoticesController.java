@@ -10,5 +10,5 @@ public class NoticesController {
         public String getLoansDetails() {
             return "Inquiry notices details are saved to the DB";
 
-        }
+        } 
 }
