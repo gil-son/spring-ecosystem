@@ -30,13 +30,13 @@ public class ProjectSecurityConfig {
     @Bean
     public InMemoryUserDetailsManager userDetailsService(){
         /* Approach I were we use withDefaultPasswordEncoder() method while creating the user details*/
-        UserDetails admin = User.builder()
+        UserDetails admin = User.withDefaultPasswordEncoder()
                 .username("admin")
                 .password("12345")
                 .authorities("admin")
                 .build();
 
-        UserDetails user = User.builder()
+        UserDetails user = User.withDefaultPasswordEncoder()
                 .username("user")
                 .password("12345")
                 .authorities("read")
