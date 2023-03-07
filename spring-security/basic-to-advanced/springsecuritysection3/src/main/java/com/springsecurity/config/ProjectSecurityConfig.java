@@ -15,7 +15,7 @@ import javax.sql.DataSource;
 @Configuration
 public class ProjectSecurityConfig {
 
-    @Bean 
+    @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception{
         http.authorizeHttpRequests()
                 .requestMatchers("/myAccount", "/myBalance", "/myCards", "/myLoans").authenticated()
