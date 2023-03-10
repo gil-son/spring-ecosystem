@@ -9,14 +9,15 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
-
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import javax.sql.DataSource;
 
 @Configuration
 public class ProjectSecurityConfig {
 
     @Bean
-    SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception{
+    SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests()
                 .requestMatchers("/myAccount", "/myBalance", "/myCards", "/myLoans").authenticated()
                 .requestMatchers("/notices", "/contact").permitAll()
@@ -26,10 +27,11 @@ public class ProjectSecurityConfig {
 
     }
 
+    /*
     @Bean
     public InMemoryUserDetailsManager userDetailsService(){
-        /* Approach I were we use withDefaultPasswordEncoder() method while creating the user details*/
-        /*UserDetails admin = User.withDefaultPasswordEncoder()
+        // Approach I were we use withDefaultPasswordEncoder() method while creating the user details
+        // UserDetails admin = User.withDefaultPasswordEncoder()
                 .username("admin")
                 .password("12345")
                 .authorities("admin")
@@ -41,11 +43,9 @@ public class ProjectSecurityConfig {
                 .authorities("read")
                 .build();
 
-        return new InMemoryUserDetailsManager(admin, user);*/
+        return new InMemoryUserDetailsManager(admin, user);
 
-        /*Approach 2 where we use NoOpPasswordEncoder Bean
-        while creating the user details*/
-
+        //Approach 2 where we use NoOpPasswordEncoder Bean while creating the user details
         UserDetails admin = User.withUsername("admin")
                 .password("12345")
                 .authorities("admin")
@@ -58,7 +58,14 @@ public class ProjectSecurityConfig {
 
         return new InMemoryUserDetailsManager(admin, user);
     }
+    */
 
+
+    // JDBC Authentication
+    @Bean
+    public UserDetailsService userDetailsService(DataSource dataSource) {
+	    return new JdbcUserDetailsManager(dataSource);
+    }
 
 
     /**
