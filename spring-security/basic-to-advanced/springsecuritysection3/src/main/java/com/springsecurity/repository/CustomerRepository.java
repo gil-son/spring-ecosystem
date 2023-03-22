@@ -1,9 +1,14 @@
 package com.springsecurity.repository;
 
+import com.springsecurity.model.Customer;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface CustormerRepository extends CrudRepository {
+import java.util.List;
 
+@Repository
+public interface CustomerRepository extends CrudRepository<Customer, Long> {
 
+    List<Customer> findByEmail(String email);
 
 }
