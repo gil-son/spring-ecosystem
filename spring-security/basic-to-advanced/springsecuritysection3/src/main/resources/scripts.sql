@@ -15,10 +15,22 @@ create table `authorities` (
 PRIMARY KEY(`id`)
 );
 
+CREATE TABLE `customer` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(45) NOT NULL,
+  `pwd` varchar(45) NOT NULL,
+  `role` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+);
 
 INSERT IGNORE INTO `users` VALUES(NULL, 'happy', '12345', '1');
 INSERT IGNORE INTO `authorities` VALUES(NULL, 'happy', 'write');
 
 
+INSERT INTO `customer` (`email`, `pwd`, `role`) VALUES ('johndoe@example.com', '54321', 'admin');
+
+
+
 SELECT * FROM `users` LIMIT 100;
 SELECT * FROM `authorities`LIMIT 100;
+SELECT * FROM `customer`LIMIT 100;
