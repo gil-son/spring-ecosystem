@@ -62,10 +62,10 @@ public class ProjectSecurityConfig {
 
 
     // JDBC Authentication
-    @Bean
+    /*@Bean
     public UserDetailsService userDetailsService(DataSource dataSource) {
 	    return new JdbcUserDetailsManager(dataSource);
-    }
+    }*/
 
 
     /**
