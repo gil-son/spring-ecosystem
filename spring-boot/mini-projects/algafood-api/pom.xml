@@ -5,8 +5,8 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.5</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>3.0.5</version>
+		<relativePath/> !-- lookup parent from repository -->
 	</parent>
 	<groupId>com.algaworks</groupId>
 	<artifactId>algafood-api</artifactId>
@@ -14,7 +14,7 @@
 	<name>algafood-api</name>
 	<description>Food Delivery API </description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
