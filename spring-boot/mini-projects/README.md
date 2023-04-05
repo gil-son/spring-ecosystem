@@ -6,84 +6,84 @@ spring-boot-compilation - mini-projects
     <tr>
       <th>Projects</th>
       <th>Resources</th>
-      <th>Last Update</th>
+      <th>Version</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>algafood-api</td>
       <td>text</td>
-      <td>2021</td>
+      <td>3.0.5</td>
     </tr>
     <tr>
       <td>api-crud-1tn-sw-sdb-adto-adao-ac-as</td>
       <td>text</td>
-      <td>2021</td>
+      <td>3.0.5</td>
     </tr>
     <tr>
       <td>b2tech-springboot-mongodb</td>
       <td>text</td>
-      <td>2021</td>
+      <td>3.0.5</td>
     </tr>
     <tr>
       <td>consume-api-with-webclient</td>
       <td>text</td>
-      <td>2021</td>
+      <td>2.x.x</td>
     </tr>
     <tr>
       <td>domainmodel</td>
       <td>text</td>
-      <td>2021</td>
+      <td>2.x.x</td>
     </tr>
     <tr>
       <td>in28minutes-spring-microservice</td>
       <td>text</td>
-      <td>2022</td>
+      <td>2.x.x</td>
     </tr>
     <tr>
       <td>liquibase-practice</td>
       <td>text</td>
-      <td>2023</td>
+      <td>2.x.x</td>
     </tr>
     <tr>
       <td>orange-talents</td>
       <td>text</td>
-      <td>2021</td>
+      <td>2.x.x</td>
     </tr>
     <tr>
       <td>re-ciclo-api</td>
       <td>text</td>
-      <td>2021</td>
+      <td>2.x.x</td>
     </tr>
     <tr>
       <td>registerevent</td>
       <td>text</td>
-      <td>2021</td>
+      <td>2.x.x</td>
     </tr>
     <tr>
       <td>spring-boot-camel-begin</td>
       <td>text</td>
-      <td>2021</td>
+      <td>2.x.x</td>
     </tr>
     <tr>
       <td>spring-boot-camel-bom-begin</td>
       <td>text</td>
-      <td>2021</td>
+      <td>2.x.x</td>
     </tr>
     <tr>
       <td>spring-boot-camel-jdbc</td>
       <td>text</td>
-      <td>2021</td>
+      <td>2.x.x</td>
     </tr>
     <tr>
       <td>spring-boot-camel</td>
       <td>text</td>
-      <td>2021</td>
+      <td>2.x.x</td>
     </tr>
     <tr>
       <td>spring-boot-crud-sw-sda-ae-adt</td>
       <td>text</td>
-      <td>2022</td>
+      <td>2.x.x</td>
     </tr>
   </tbody>
 </table>
