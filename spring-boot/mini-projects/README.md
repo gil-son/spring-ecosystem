@@ -5,7 +5,7 @@ spring-boot-compilation - mini-projects
     <tr>
       <th>Projects</th>
       <th>Resources</th>
-      <th>Spring Version</th>
+      <th>Spring Boot Version</th>
       <th>Java Version</th>
     </tr>
   </thead>
@@ -49,56 +49,56 @@ spring-boot-compilation - mini-projects
     <tr>
       <td>liquibase-practice</td>
       <td>text</td>
-      <td>2.x.x</td>
-      <td>11</td>
+      <td>3.0.5</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>orange-talents</td>
       <td>text</td>
-      <td>2.x.x</td>
-      <td>11</td>
+      <td>3.0.5</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>re-ciclo-api</td>
       <td>text</td>
-      <td>2.x.x</td>
-      <td>11</td>
+      <td>3.0.5</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>registerevent</td>
       <td>text</td>
-      <td>2.x.x</td>
-      <td>11</td>
+      <td>3.0.5</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>spring-boot-camel-begin</td>
       <td>text</td>
-      <td>2.x.x</td>
-      <td>11</td>
+      <td>3.0.5</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>spring-boot-camel-bom-begin</td>
       <td>text</td>
-      <td>2.x.x</td>
-      <td>11</td>
+      <td>3.0.5</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>spring-boot-camel-jdbc</td>
       <td>text</td>
-      <td>2.x.x</td>
-      <td>11</td>
+      <td>3.0.5</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>spring-boot-camel</td>
       <td>text</td>
-      <td>2.x.x</td>
-      <td>11</td>
+      <td>3.0.5</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>spring-boot-crud-sw-sda</td>
       <td>text</td>
-      <td>2.x.x</td>
-      <td>11</td>
+      <td>3.0.5</td>
+      <td>17</td>
     </tr>
   </tbody>
 </table>
