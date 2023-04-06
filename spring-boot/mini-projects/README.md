@@ -1,12 +1,12 @@
 spring-boot-compilation - mini-projects
 
-
 <table>
   <thead>
     <tr>
       <th>Projects</th>
       <th>Resources</th>
-      <th>Version</th>
+      <th>Spring Version</th>
+      <th>Java Version</th>
     </tr>
   </thead>
   <tbody>
@@ -14,76 +14,91 @@ spring-boot-compilation - mini-projects
       <td>algafood-api</td>
       <td>text</td>
       <td>3.0.5</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>api-crud-1tn-sw-sdb-adto-adao-ac-as</td>
       <td>text</td>
       <td>3.0.5</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>b2tech-springboot-mongodb</td>
       <td>text</td>
       <td>3.0.5</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>consume-api-with-webclient</td>
       <td>text</td>
-      <td>2.x.x</td>
+      <td>3.0.5</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>domainmodel</td>
       <td>text</td>
-      <td>2.x.x</td>
+      <td>3.0.5</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>in28minutes-spring-microservice</td>
       <td>text</td>
-      <td>2.x.x</td>
+      <td>3.0.0</td>
+      <td>17</td>
     </tr>
     <tr>
       <td>liquibase-practice</td>
       <td>text</td>
       <td>2.x.x</td>
+      <td>11</td>
     </tr>
     <tr>
       <td>orange-talents</td>
       <td>text</td>
       <td>2.x.x</td>
+      <td>11</td>
     </tr>
     <tr>
       <td>re-ciclo-api</td>
       <td>text</td>
       <td>2.x.x</td>
+      <td>11</td>
     </tr>
     <tr>
       <td>registerevent</td>
       <td>text</td>
       <td>2.x.x</td>
+      <td>11</td>
     </tr>
     <tr>
       <td>spring-boot-camel-begin</td>
       <td>text</td>
       <td>2.x.x</td>
+      <td>11</td>
     </tr>
     <tr>
       <td>spring-boot-camel-bom-begin</td>
       <td>text</td>
       <td>2.x.x</td>
+      <td>11</td>
     </tr>
     <tr>
       <td>spring-boot-camel-jdbc</td>
       <td>text</td>
       <td>2.x.x</td>
+      <td>11</td>
     </tr>
     <tr>
       <td>spring-boot-camel</td>
       <td>text</td>
       <td>2.x.x</td>
+      <td>11</td>
     </tr>
     <tr>
-      <td>spring-boot-crud-sw-sda-ae-adt</td>
+      <td>spring-boot-crud-sw-sda</td>
       <td>text</td>
       <td>2.x.x</td>
+      <td>11</td>
     </tr>
   </tbody>
 </table>
