@@ -12,9 +12,9 @@
 	<description>Camel REST API with JSON support</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 		<camel.version>3.9.0</camel.version>
-		<spring.boot-version>2.4.4</spring.boot-version>
+		<spring.boot-version>3.0.5</spring.boot-version>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
