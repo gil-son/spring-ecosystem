@@ -11,7 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
 @Table(name = "users")
-public class UserAuth implements UserDetails {
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,7 +37,7 @@ public class UserAuth implements UserDetails {
 
     // Construtor, getters e setters
 
-    public UserAuth(Long id, String username, String email, String password, Address address) {
+    public User(Long id, String username, String email, String password, Address address) {
         this.id = id;
         this.username = username;
         this.email = email;

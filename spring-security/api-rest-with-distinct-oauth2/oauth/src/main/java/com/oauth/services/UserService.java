@@ -10,10 +10,12 @@ import org.springframework.stereotype.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Service
-public class UserDetailsServiceImpl implements UserDetailsService {
+import java.util.List;
 
-    private static Logger logger = LoggerFactory.getLogger(UserDetailsServiceImpl.class);
+@Service
+public class UserService implements UserDetailsService {
+
+    private static Logger logger = LoggerFactory.getLogger(UserService.class);
     @Autowired
     private UserRepository userRepository;
 
@@ -32,5 +34,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         logger.info("User found: "+username);
 
         return user;
+    }
+
+    public List<User> getAllUsers() {
+        return userRepository.findAllUsers();
     }
 }
