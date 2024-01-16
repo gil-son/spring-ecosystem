@@ -34,3 +34,20 @@ docker run -d --name my-redis-container -p 6379:6379 redis:latest
 
 </li>
 </ol>
+
+
+### Project
+
+To execute the project, follow these steps:
+
+<ol>
+<li>Open your preferred IDE</li>
+<li>Import the project into the IDE</li>
+<li>Update Maven dependencies</li>
+<li>Run the project</li>
+</ol>
+
+### Source
+
+<a href="https://www.youtube.com/watch?v=YcI9b-lgi7w)https://www.youtube.com/watch?v=YcI9b-lgi7w">Giuliana Bezerra - Aprenda a usar cache nos seus projetos Spring Boot!</a>
+
