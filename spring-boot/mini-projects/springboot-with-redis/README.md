@@ -1,4 +1,17 @@
 
+### Redis
+
+Why is Redis important?
+
+Imagine you have an application, and a user needs to access information. The application accesses the database – that's fine. However, moments later, the same user needs the same information again. If your application didn't save the information, it would be necessary to access the database once more. This process consumes time and resources. Now, multiply that action by millions of user actions. It can become a problem!
+
+On the other hand, when a user needs to retrieve information from the database, your application retrieves the information and delivers it to them. Moments later, if the user needs the same information again and your application has that information in the cache (Redis), your application doesn't need to access the database again! The consequences of this action are time and resource savings.
+
+<div align="center"> 
+    <img src="https://thumbs2.imgbox.com/ca/f7/2Qc36hnT_t.png">  
+</div>
+
+
 
 ### Docker
 
