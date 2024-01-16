@@ -72,7 +72,7 @@ spring-boot-compilation - mini-projects
     </tr>
     <tr>
       <td>spring-boot-camel-begin</td>
-      <td>text</td>
+      <td>Simple demonstration of Apache Camel</td>
       <td>3.0.5</td>
       <td>17</td>
     </tr>
@@ -90,7 +90,7 @@ spring-boot-compilation - mini-projects
     </tr>
     <tr>
       <td>spring-boot-camel</td>
-      <td>text</td>
+      <td>Simple demonstration of Apache Camel</td>
       <td>3.0.5</td>
       <td>17</td>
     </tr>
@@ -98,6 +98,12 @@ spring-boot-compilation - mini-projects
       <td>spring-boot-crud-sw-sda</td>
       <td>text</td>
       <td>3.0.5</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>springboot-with-redis</td>
+      <td>The Benefits of the cache (Redis)</td>
+      <td>3.2.1</td>
       <td>17</td>
     </tr>
   </tbody>
