@@ -7,12 +7,7 @@
 
 </div>
 
-
-
 <hr/>
-
-
-
 
 ### References
 
@@ -25,10 +20,14 @@
 
 </ul>
 
-
 ### Resources:
 
 <ul>
   <li><a href="https://start.spring.io/">Spring Initializr</li>
   <li><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html">Spring Properties</li>
 </ul>
+
+<hr/>
+<div align="center">
+  <img src="https://svgshare.com/i/13cG.svg" width="25%">
+</div>
